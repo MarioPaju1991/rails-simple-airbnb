@@ -2,6 +2,10 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+gem "active_storage_validations"
+
+gem "image_processing", "~> 1.12"
+
 gem "simple_form"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
