@@ -8,7 +8,7 @@ Flat.destroy_all
 
 # flat1_file = URI.open("https://res.cloudinary.com/daktzdqij/image/upload/v1703470600/flat1_egovsh.jpg")
 flat1 = Flat.create!(
-  name: 'Light & Spacious Garden Flat London',
+  name: 'Light & Spacious Garden House',
   address: '10 Clifton Gardens London W9 1DT',
   description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
   price_per_night: 75,
@@ -22,9 +22,9 @@ flat1 = Flat.create!(
 
 #  flat2_file = URI.open("https://res.cloudinary.com/daktzdqij/image/upload/v1703470637/flat2_mjvgjz.jpg")
  flat2 = Flat.create!(
-   name: 'Cozy Studio in Paris',
+   name: 'House in Paris',
    address: '25 Rue du Faubourg Saint-Antoine, 75011 Paris, France',
-   description: 'A charming studio apartment in the heart of Paris. Perfect for a romantic getaway with a comfortable bed and a small kitchenette.',
+   description: 'Perfect for a romantic getaway with a comfortable bed and a small kitchenette.',
    price_per_night: 90,
    number_of_guests: 2,
    photo_url: "https://res.cloudinary.com/daktzdqij/image/upload/v1703470637/flat2_mjvgjz.jpg"
