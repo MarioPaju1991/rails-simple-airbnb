@@ -1,6 +1,7 @@
 .flex {
   display: flex;
 }
+
 .flex-align {
   display: flex;
   align-items: center;
@@ -10,12 +11,20 @@
 .card {
   width: 100%;
   position: relative;
-  margin: .5rem 0 1rem 0;
+  margin: 0.5rem 0 1rem 0;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
   height: 450px;
   overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
 .card-image {
@@ -26,22 +35,44 @@
 
 .card-content {
   padding: 24px;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   height: 100%;
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-image {
+    height: 120px;
+  }
+}
+
 .flat-form {
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   padding: 24px;
   border-radius: 3px;
 }
 
 .flat-show-card {
-  background: #F8F9FA;
+  background: #f8f9fa;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }
 
@@ -54,6 +85,7 @@
 .margin-top-negative {
   margin-top: -75px;
 }
+
 .no-mb {
   margin-bottom: 0;
 }
@@ -67,6 +99,30 @@
 .flat-card-actions {
   position: relative;
   background-color: inherit;
-  border-top: 1px solid rgba(160,160,160,0.2);
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 16px 24px;
+}
+
+.body-color {
+  background-color: #e5e5e5;
+}
+
+.link-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.link-btn:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #fff;
+}
+
+.link-btn a {
+  text-decoration: none;
 }

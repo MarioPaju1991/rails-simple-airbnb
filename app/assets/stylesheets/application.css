@@ -14,3 +14,25 @@
  *= require_self
  */
 @import "cards";
+
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-image {
+    height: 120px;
+  }
+}
