@@ -5,6 +5,15 @@
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col d-flex align-items-center justify-content-center">
+    <% if @query %>
+      <p>You searched for <strong><%= @query %></strong>. We found <%= @flats.count %> flats out of our <%= Flat.count %> on our website.</p>
+    <% else %>
+      <p>All <%= Flat.count %> flats</p>
+    <% end %>
+  </div>
+</div>
 <%# Displaying all houses %>
 <div class="container">
   <div class="row">
@@ -29,6 +38,7 @@
               </div>
             </div>
           </div>
+          <%# Button %>
           <div class="flat-card-actions">
             <div class="link-btn">
               <%= link_to "Details", flat_path(flat) %>
